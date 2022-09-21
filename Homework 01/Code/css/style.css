@@ -1,0 +1,77 @@
+body {
+    background: #f6f6f6;
+    font-size: 18px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 1.5;
+    color: #05080C;
+    margin: 0;
+}
+
+header {
+    border-top: 5px solid #222222;
+    padding: 32px 100px 0 100px;
+}
+footer {
+    border-bottom: 5px solid #222222;
+    padding: 32px;
+}
+p {
+    font-family: Georgia, Times, "Times New Roman", serif; 
+    padding: 0 0 24px 0;
+
+
+}
+article {
+    padding: 0 100px;
+}
+
+
+hr {
+    border: 0.5px solid #d5d5d5;
+}
+
+table {
+    width: 100%;
+    font-family: sans-serif;
+}
+
+th {
+    background: #222222;
+    color: #ffffff;
+    padding: 12px;
+   
+}
+
+td {
+    background: #eeeeee;
+    padding: 12px;
+    text-align: center;
+    
+}
+
+ol a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #126c00
+    
+}
+
+p a {
+    font-weight:lighter;
+    color:#0062ff
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+article section img {
+    float: right;
+    margin-left: 32px;
+    margin-bottom: 24px; /* added margin to bottom for more breathing room */
+}
+li:target {
+    /* adds background color to anchor link */
+    background: #fdff9b;
+}
