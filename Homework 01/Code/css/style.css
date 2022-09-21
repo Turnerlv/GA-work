@@ -60,7 +60,7 @@ ol a {
 
 p a {
     font-weight:lighter;
-    color:#0062ff
+    color:#0062ff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,5 +73,5 @@ article section img {
 }
 li:target {
     /* adds background color to anchor link */
-    background: #fdff9b;
+    background: #0062ff4a;
 }
