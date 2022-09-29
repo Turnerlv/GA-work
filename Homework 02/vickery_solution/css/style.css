@@ -36,7 +36,7 @@ body {
   display: flex;
   background-color: #000000;
   border-bottom: 5px solid #f2ff00;
-  padding: 10px 30px; /* first number controls top and bottom, second left and right */
+  padding: 5px 20px; /* first number controls top and bottom, second left and right */
   color: #ffffff;
   justify-content: space-between;
   align-items: center;
@@ -50,17 +50,27 @@ body {
 
 /* header > logo div > header > link */
 .global_header .logo a {
+  box-sizing: content-box;
   font-family: 'Merriweather', serif;
+  font-weight: 700;
   font-size: 32px;
   color: #f2ff00;
   text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 4px;
 }
+
+/* Playing with focus states */
+.global_header .logo a:focus {
+  outline: none;
+  box-shadow: 0 0 0 1pt #f2ff00;
+}
+
 
 /* header > navigation > unordered list */
 .global_header .top_nav ul {
   display: flex;
-  padding: 15px 0px;
-  gap: 15px;
+  padding: 10px 2.5px;
   align-items: center;
   
   
@@ -84,8 +94,19 @@ body {
   line-height: 1.15;
 }
 
+.top_nav ul a {
+   padding: 10px 7.5px; /*Changed some of the sizing to get focus states to work */
+}
+
+
 .top_nav ul a:hover {
   color: #f2ff00;
+}
+
+.top_nav ul a:focus {
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 0 0 1pt #f2ff00;
 }
 
 
@@ -206,6 +227,10 @@ footer p {
   color: #000000;
 
 
+}
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 1pt #000000;
 }
 
 
