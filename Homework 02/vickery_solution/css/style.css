@@ -1,0 +1,224 @@
+/* ################################################## */
+/* ########### Global classes / overrides ########### */
+/* ################################################## */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+
+}
+
+ul {
+  margin:0;
+}
+
+body {
+  margin: 0px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 15px 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.15;
+}
+
+
+
+
+
+/* ------------HEADER CLASSES------------- */
+
+
+.global_header {
+  display: flex;
+  background-color: #000000;
+  border-bottom: 5px solid #f2ff00;
+  padding: 10px 30px; /* first number controls top and bottom, second left and right */
+  color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.global_header .logo {
+  display: flex;
+  justify-content: center;
+}
+
+/* header > logo div > header > link */
+.global_header .logo a {
+  font-family: 'Merriweather', serif;
+  font-size: 32px;
+  color: #f2ff00;
+  text-decoration: none;
+}
+
+/* header > navigation > unordered list */
+.global_header .top_nav ul {
+  display: flex;
+  padding: 15px 0px;
+  gap: 15px;
+  align-items: center;
+  
+  
+}
+/* header > navigation > unordered list > UPPERCASE */
+.nav_find_talent {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 1.15;
+  
+}
+/* header > navigation > unordered list > lowercase */
+.nav_links {
+  font-family: 'Lato', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 1.15;
+}
+
+.top_nav ul a:hover {
+  color: #f2ff00;
+}
+
+
+/* ------------SUB-HEADER CLASSES------------- */
+
+.sub_head {
+  background: #adadad;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.sub_head p {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.taste {
+  text-decoration: line-through;
+}
+.are {
+  border-bottom: 3px solid #f2ff00;
+  line-height: 1.15;
+}
+
+
+/* ------------MAIN CLASSES------------- */
+
+
+.hero {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/coworking.jpg') center center no-repeat; /* Would like to know more about these properties. I messed this up until copying the solution's version */
+  background-size: cover;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 60%;
+}
+
+.match_div {
+  display: block;
+  background-color: #fffffff0;
+  box-shadow: 0 0 5px #000000d5;
+  width: 380px;
+  height: 230px;
+  margin: 25px;
+  padding:4%;
+}
+
+.match_div h2{
+  font-size: 24px;
+  
+}
+
+.match_div .button {
+  background-color: #f2ff00;
+  border-bottom: 2px solid #ffd900;
+}
+
+
+
+/* ------------OPTION CARDS CLASSES------------- */
+
+.option_cards {
+  display: flex;
+  padding: 10px 0;
+}
+
+.card {
+  display: block;
+  padding: 2%;
+  border-right: 1px solid lightgrey;
+}
+
+.card:last-child {
+  border: none;
+}
+
+.card h1 {
+  font-family: 'Merriweather', serif;
+}
+
+.card .button {
+  background-color: #adadad;
+  border-bottom: 2px solid #878787;
+}
+
+/* ------------FOOTER CLASSES------------- */
+
+footer {
+  background: #000000;
+  padding: 15px 25px;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0;
+}
+
+/* ------------COMPONENT CLASSES------------- */
+
+.button {
+
+  /* Can't get the height to match the solution for some reason. Tried block display and it still was off. (update: did not see the line-height was too high) */
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  
+
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+
+
+}
+
+
+/* Fonts, classes are so I can reuse the styles on a variety of elements */
+.merriweather { font-family: 'Merriweather', serif; }
+      .oswald { font-family: 'Oswald', sans-serif; }
+        .lato { font-family: 'Lato', sans-serif; }
+
+/* Colors */
+/* Dark yellow: #f2ff00 */
+/* Lighter yellow: #ffd900 */
+/* Light gray: #adadad */
+/* Medium gray: #878787 */
+
+/* Background Image */
+/* https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/coworking.jpg */
