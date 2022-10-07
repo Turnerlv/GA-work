@@ -11,6 +11,12 @@ p {
   padding: 15px 0;
 }
 
+.global_header .logo h1 a {
+  font-family: 'Merriweather', serif;
+  font-size: 32px;
+  text-decoration: none;
+}
+
 /* Fonts, classes are so I can reuse the styles on a variety of elements */
 .merriweather { font-family: 'Merriweather', serif; }
       .oswald { font-family: 'Oswald', sans-serif; }

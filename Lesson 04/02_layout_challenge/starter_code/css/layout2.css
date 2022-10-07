@@ -1,0 +1,39 @@
+
+.exerciseHeader, .exerciseFooter, .exerciseMain {
+    margin: 0 10px 10px 10px;
+}
+
+body {
+    display: flex;
+    flex-direction:column;
+    height: 500px;
+
+}
+.exerciseMain {
+    display: flex;
+    gap: 10px;
+    flex-grow:2;
+;
+}
+
+.exerciseMainContent {
+  
+    flex-grow: 6;
+}
+
+.exerciseMainAside {
+   
+    flex-grow: 2;
+
+}
+.exerciseHeader, .exerciseFooter {
+    
+    flex-grow: 1;
+}
+
+.exerciseMainContent, .exerciseMainAside, .exerciseFooter, .exerciseHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

@@ -1,0 +1,90 @@
+
+.exerciseFooter, .exerciseMain {
+    margin: 0 10px 10px 10px;
+}
+
+.exerciseHeader {
+
+    display: flex;
+    width: 100%;
+   
+
+}
+
+.exerciseHeaderLogo {
+    width: 200px;
+    height: 80px;
+
+}
+
+.exerciseHeaderNav {
+    display:flex;
+    width:100%;
+    justify-content: stretch;
+   
+    
+}
+
+.exerciseHeaderNav ul {
+    display: flex;
+    padding-left: 100px;
+
+    gap: 10px;
+    width:100%;
+    justify-content: space-between;
+
+}
+
+.exerciseHeaderNav ul li {
+
+    list-style: none;
+    
+    min-width: 100px;
+    flex-grow: 1;
+
+}
+
+
+/* Main */
+
+.exerciseMain {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.exerciseMainLeftNav {
+
+        background: yellow;
+        flex: 1;
+
+}
+
+.exerciseMainContent {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content: space-between;
+    flex:3;
+    overflow:hidden;
+    background:red;
+
+}
+
+.exerciseMainContent > * {
+    margin: 0;
+}
+
+.exerciseMainContentBanner {
+    flex: 100%;
+}
+
+.exerciseMainContentSubBanner {
+    flex: 75%;
+    margin-right: 10px;
+}
+
+.exerciseMainContentBlock {
+    flex: 25%;
+}

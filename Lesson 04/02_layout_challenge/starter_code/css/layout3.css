@@ -1,0 +1,56 @@
+
+.exerciseHeader, .exerciseFooter, .exerciseMain {
+    margin: 0 10px 10px 10px;
+}
+
+body {
+    display: flex;
+    flex-direction:column;
+    align-items:stretch;
+    height: 500px;
+}
+
+.exerciseMainFeatures {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: 10px;
+
+
+}
+header, .exerciseMain, footer {
+    flex-grow:1;
+}
+
+.exerciseMainFeatures .exerciseMarketingFeature {
+
+    flex-grow: 1;
+
+}
+
+.exerciseMainFeatures .exerciseMarketingFeature:first-child {
+
+}
+
+.exerciseAdditionalFeatures {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+
+}
+
+.exerciseAdditionalFeatures .exerciseMarketingFeature {
+
+    flex-grow: 1;
+}
+
+.exerciseAdditionalFeatures .exerciseMarketingFeature:first-child {
+
+}
+.exerciseMain {
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    gap: 10px;
+}
