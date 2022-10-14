@@ -35,3 +35,15 @@ body {
   margin: 25px auto;
   transition: background 500ms;
 }
+
+.stop {
+  background: red;
+}
+
+.slow {
+  background: yellow;
+}
+
+.go {
+  background: green;
+}
