@@ -1,0 +1,229 @@
+
+
+/********  NAVIGATION  *********/
+
+.main-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.main-menu-bar{
+    display:flex;
+    padding: 1rem 3rem;
+    border-bottom: solid 1px #b2b2b2;
+    justify-content: space-between;
+    
+    
+    
+    
+}
+
+.main-nav-left,
+.main-nav-right{
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    
+    
+}
+
+.main-nav-left{
+    flex-grow: 1;
+    padding-left: 1.12rem;
+    border-left: solid 1px #b2b2b2;
+    
+}
+
+
+.main-nav-item{
+    text-decoration: none;
+    color: #333333;
+    font-size: 1rem;
+    font-family: Helvetica;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.12rem;
+    margin: 0;
+    line-height: 1.5rem;
+
+}
+
+.main-nav-item span{
+
+    color: #333333;
+}
+
+.main-nav-right .main-nav-item{
+    padding: 1rem 2rem;
+    border-left: solid 1px #b2b2b2;
+}
+
+.main-nav-right .main-nav-item p{
+    display:none;
+}
+
+.main-nav-right li:first-child .main-nav-item {
+    border: 0px;
+}
+
+.flag{
+    height: 1.5rem;
+}
+
+.logo,
+.logo-link {
+    height: 4rem;
+    width: 4rem;
+}
+
+.logo-container{
+    display: flex;
+    margin-right: 2rem;
+    
+}
+.inline-nav-item {
+    display: none;
+}
+
+@media (max-width:1120px){
+
+.main-menu-bar  {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    flex-direction: column;
+} 
+
+.logo-container {
+    display:flex;
+    padding: 1rem 1rem;
+    border-bottom: solid 1px #b2b2b2;
+    justify-content: space-between;
+    
+    margin-right:0;
+}   
+
+.menu-toggle{
+    display: none;
+} 
+
+
+.main-nav-left{
+    flex-direction: column;
+    padding:0;
+}
+.main-nav-right {
+    flex-direction: row;
+    padding:0;
+}
+
+.main-nav-left li,
+.main-nav-right li{
+    width: 100%;
+    border-bottom: solid 1px #b2b2b2;
+    
+}
+
+.main-nav-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.inline-nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.65rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+.main-nav-right .main-nav-item {
+    display:flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    background-color: #f2f2f2;
+}
+
+.main-nav-right .main-nav-item p{
+    display:block;
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.main-nav-right li:last-child {
+    display: none;
+}
+
+}
+
+
+/********  HERO SECTION  *********/
+  
+html,
+body{
+    height:100%;
+}
+
+.hero-section {
+    display: flex;
+    height: 100%;
+    margin: 1rem 1rem;
+    
+}
+
+.hero-left {
+    flex-grow: 2; 
+    background-color: #f2f2f2;
+}
+
+.hero-right {
+    flex-grow: 3;
+    background: url("../global/images/Hero-14.png") no-repeat center;
+    background-size: contain;
+    height: calc(100% - 100px);
+    max-height: 700px;
+    
+    color: #66727c;
+}
+
+/********  PUBLICATIONS SECTION  *********/
+
+.publications-section{
+    padding: 5rem 0;
+    background-color: #66727c;
+}
+
+/********  Varieties SECTION  *********/
+
+.varieties-section{
+    display: flex;
+    flex-direction: row;
+    
+    background-color: #66727c;
+}
+
+.product-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+}
+
+.product-content-overview{
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-image {
+    width:100%;
+}
+
+
+
+
