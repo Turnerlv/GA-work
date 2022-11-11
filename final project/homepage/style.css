@@ -171,18 +171,18 @@ h1{
     font-weight: 800;
     line-height: 4rem;
 }
+h2{
+    font-family: georgia;
+    font-size: 2rem;
+    font-weight:800;
+}
 h3{
     font-size: 1.5rem;
-    font-family: helvetica;
+    font-family: georgia;
     font-weight: 800;
 }
 
 h4{
-    font-size: 1.5rem;
-    font-family: helvetica;
-    font-weight: 400;
-}
-h5{
     font-size: 1rem;
     font-family: helvetica;
     font-weight: 600;
@@ -292,9 +292,9 @@ body{
     flex-direction:column;
     align-items: center;
     gap: 1rem;
-    transition: 1s ease-in-out;
+    transition: 400ms ease-in-out;
     
- /* Animation testing */
+
     
 }
 
@@ -308,12 +308,12 @@ body{
     position: absolute;
     left: 0;
     right: 0;
-    transition: 1s ease-in-out;
+    transition: 400ms ease-in-out;
 }
 
 .product-image {
     width: 100%;
-    max-width:300px;
+    max-width:250px;
 }
 
 .product-ingredients{
@@ -347,14 +347,13 @@ body{
 }
 
 .product-tagline{
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     text-align:center;
     list-style: none;
 }
 
 .product-tagline li{
     margin-bottom: 1rem;
-    font-family: helvetica;
 }
 .product-tagline li:last-child{
     margin-bottom: 0;
@@ -375,6 +374,27 @@ body{
     position: relative;
     overflow: hidden;
     
+}
+
+/********  BLOG SECTION  *********/
+
+.blog-section{
+    padding: 4rem 4rem;
+    background-color: #E9F3EA;
+    
+}
+.blog-post{
+    display: flex;
+}
+.blog-image{
+    margin: 2rem;
+    border-radius: 1rem;
+    width: 50%;
+    
+}
+.blog-content{
+    justify-self: stretch;
+    margin: 0 4rem;
 }
 
 
