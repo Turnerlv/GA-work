@@ -42,6 +42,13 @@ menuButton.addEventListener('click', function() {
 });
 
 
+
+
+// ************************ Add product varieties ***************************
+
+
+
+
 function addVarieties(){
 
     let variety = productDataObject['data'];
@@ -67,7 +74,7 @@ function addVarieties(){
 
     // Set product price 
 
-    productVarieties[i].querySelector(".product-price").innerText = variety[i]['price'];
+    productVarieties[i].querySelector(".product-price").innerText =  "From " + variety[i]['price'];
 
     // Set product description  
 
@@ -77,14 +84,25 @@ function addVarieties(){
 
     console.log(variety[i]['custom_fields'][0]['value']);
 
-    productVarieties[i].querySelector(".product-tagline").innerText = variety[i]['custom_fields'][0]['value'];
+
+    let tagWords = variety[i]['custom_fields'][0]['value'].split(" ");
+
+    for (h=0;h < tagWords.length; h++){
+
+        productVarieties[i].querySelector(".product-tagline").innerHTML +=`<li>${tagWords[h]}</li>`; 
+
+    }
+
+    
 
     let ingredients = variety[i]['custom_fields'][1]['value']
 
     for (g=0; g < ingredients.length; g++){
 
         let thisIngredient = productVarieties[i].querySelector(".product-ingredients");
-        thisIngredient.innerHTML += "<li>" + variety[i]['custom_fields'][1]['value'][g] + "</li>";
+
+        thisIngredient.innerHTML +=`<li>${variety[i]['custom_fields'][1]['value'][g]}</li>`;
+
 
     }
 
@@ -104,5 +122,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
   addVarieties();
 });
+
+
+
+
+//***********************    Variety switcher *************/
+
+let toggleVariety = document.querySelectorAll(".underline-button");
+
+let productOverview = document.querySelectorAll(".product-content-overview");
+let productDetails = document.querySelectorAll(".product-details");
+
+//for animation testing
+
+        for(let i=0;i<toggleVariety.length;i++){
+
+            toggleVariety[i].addEventListener("click",function(e){
+
+                e.preventDefault();
+            
+
+                productOverview[i].classList.toggle("translate-up-one");
+
+                
+                productDetails[i].classList.toggle("translate-up-one"); 
+
+            
+                
+             
+            });
+
+        }
+
+      
+
+        
+        
+
 
 

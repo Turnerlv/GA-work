@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: column;
     background-color: white;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .main-menu-bar{
@@ -159,6 +164,50 @@
 
 }
 
+/********  GLOBAL STYLES  *********/
+h1{
+    font-family: georgia;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 4rem;
+}
+h3{
+    font-size: 1.5rem;
+    font-family: helvetica;
+    font-weight: 800;
+}
+
+h4{
+    font-size: 1.5rem;
+    font-family: helvetica;
+    font-weight: 400;
+}
+h5{
+    font-size: 1rem;
+    font-family: helvetica;
+    font-weight: 600;
+}
+hr{
+    margin:0;
+}
+
+p{
+    font-family: helvetica;
+    line-height: 1.5rem;
+}
+
+.button{
+    padding: 1.5rem 2.5rem;
+    background-color: #014108;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    text-align: center;
+    font-family: helvetica;
+    font-weight:800;
+    
+}
+
+
 
 /********  HERO SECTION  *********/
   
@@ -169,24 +218,42 @@ body{
 
 .hero-section {
     display: flex;
-    height: 100%;
-    margin: 1rem 1rem;
+    height: calc(100% - 13rem);
+    margin: 6rem 1rem 1rem 1rem;
+    padding: 3rem;
+    max-height: 700px;
+    min-height: 500px;
+    background-color: #ffffff;
     
 }
 
 .hero-left {
-    flex-grow: 2; 
-    background-color: #f2f2f2;
+    flex: 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    
+    
 }
 
 .hero-right {
-    flex-grow: 3;
+    flex: 3;
     background: url("../global/images/Hero-14.png") no-repeat center;
     background-size: contain;
-    height: calc(100% - 100px);
-    max-height: 700px;
+    height: 100%;
+    
     
     color: #66727c;
+}
+.hero-blurb{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.hero-header{
+    width: 100%;
 }
 
 /********  PUBLICATIONS SECTION  *********/
@@ -194,6 +261,7 @@ body{
 .publications-section{
     padding: 5rem 0;
     background-color: #66727c;
+    display: none;
 }
 
 /********  Varieties SECTION  *********/
@@ -201,27 +269,112 @@ body{
 .varieties-section{
     display: flex;
     flex-direction: row;
-    
-    background-color: #66727c;
+    justify-content: space-between;
+    border-top: 1px solid #b2b2b2;
 }
 
 .product-column{
+    
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     padding: 4rem;
+    gap:2rem;
+    border-right: 1px solid #b2b2b2;
 }
 
 .product-content-overview{
 
+    
     display: flex;
     flex-direction:column;
     align-items: center;
     gap: 1rem;
+    transition: 1s ease-in-out;
+    
+ /* Animation testing */
+    
+}
+
+.product-details{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 4rem auto 0;
+    gap: 1rem;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: 1s ease-in-out;
 }
 
 .product-image {
-    width:100%;
+    width: 100%;
+    max-width:300px;
+}
+
+.product-ingredients{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items:center;
+}
+
+.product-ingredients li{
+    font-family: helvetica;
+    color: #828282;
+    text-align: center;
+}
+
+.line-break{
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.product-price{
+    font-size: 1rem;
+    font-family: helvetica;
+    font-weight: 400;
+    color: #333333;
+}
+.product-description{
+    font-size: .75rem;
+    text-align: center;
+    align-self: stretch;
+}
+
+.product-tagline{
+    font-size: 1.25rem;
+    text-align:center;
+    list-style: none;
+}
+
+.product-tagline li{
+    margin-bottom: 1rem;
+    font-family: helvetica;
+}
+.product-tagline li:last-child{
+    margin-bottom: 0;
+}
+
+.underline-button{
+    font-family: helvetica;
+    color: #000000;
+}
+
+.translate-up-one{  
+    transform: translateY(-100%); 
+}
+
+
+
+.scroll-animation{
+    position: relative;
+    overflow: hidden;
+    
 }
 
 

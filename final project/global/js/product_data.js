@@ -7,7 +7,7 @@
 //   const requestURL = "https://api.bigcommerce.com/stores/6kalbbj4k4/v3/catalog/products";
 
 //   const options = {
-//     host: 'api.bigcommerce.com',
+//     // host: 'https://api.bigcommerce.com',
 //     method: 'GET',
 //     mode: 'cors',
 //     headers: {'Content-Type': 'application/json', 'X-Auth-Token': apiKey }
@@ -25,7 +25,7 @@
 
 //   console.log(productData);
 
-
+// }
 
 // document.addEventListener('DOMContentLoaded', function() {
 
@@ -130,7 +130,7 @@ const productDataObject = {
           {
             "id": 0,
             "name": "tagline",
-            "value": "Nurishing. Free-range. Clucking awesome."
+            "value": "Nurishing. Free-range. Clucking-awesome."
           },
           {
             "id": 1,
@@ -512,12 +512,12 @@ const productDataObject = {
           {
             "id": 0,
             "name": "tagline",
-            "value": "Holistic. Umami. Fin-tastic"
+            "value": "Holistic. Umami. Fin-tastic."
           },
           {
             "id": 1,
             "name": "ingredients",
-            "value": ["Free-range chicken bones and feet", "Organic onions", "Organic carrots", "Organic Celery", "Himalayan pink salt", "Organic black peppercorns", "Organic bay leaves"]
+            "value": ["Wild-caught snapper heads & bones", "Organic onions", "Organic carrots", "Organic Celery", "Himalayan pink salt", "Organic black peppercorns", "Organic bay leaves"]
           }
         ],
         "bulk_pricing_rules": [
@@ -623,3 +623,4 @@ const productDataObject = {
       }
     ]
   }
+
