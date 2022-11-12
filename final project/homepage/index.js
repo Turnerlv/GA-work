@@ -19,7 +19,7 @@ const menuButton = document.querySelector('#menu-button');
 const leftToggle = document.querySelector('.main-nav-left');
 const rightToggle = document.querySelector('.main-nav-right');
 
-// Defining a function
+// Toggle the navigation menu
 function toggleNav() {
 
     leftToggle.classList.toggle('menu-toggle');
@@ -37,7 +37,8 @@ function toggleNav() {
 }
 
 // Calling the function after click event occurs
-menuButton.addEventListener('click', function() {
+menuButton.addEventListener('click', function(e) {
+    e.preventDefault();
     toggleNav();
 });
 
@@ -129,30 +130,90 @@ document.addEventListener('DOMContentLoaded', function() {
 //***********************    Variety switcher *************/
 
 let toggleVariety = document.querySelectorAll(".underline-button");
-
 let productOverview = document.querySelectorAll(".product-content-overview");
 let productDetails = document.querySelectorAll(".product-details");
 
-//for animation testing
 
-        for(let i=0;i<toggleVariety.length;i++){
+for(let i=0;i<toggleVariety.length;i++){
 
-            toggleVariety[i].addEventListener("click",function(e){
+    let overview = productOverview[i];
+    let details = productDetails[i];
+    
+    toggleVariety[i].addEventListener("click",function(e){
 
-                e.preventDefault();
+        e.preventDefault();
+        // console.log(overview);
+        console.log(details);
+
+        if (overview.classList.contains("translate-down-two")){
+            overview.classList.add("translate-neutral");
+            // overview.classList.remove("translate-down-two");
+            details.classList.add("translate-up-two");
+            // details.classList.remove("translate-up-one");
+
+            overview.addEventListener("transitionend", function(g){
+                overview.classList.remove("translate-down-two");
+                overview.classList.remove("translate-neutral");
+
+                if (details.classList.contains("translate-up-two")){
+                    details.classList.remove("translate-up-two");
+                    details.classList.remove("translate-up-one"); 
+                }
+                
+            });
+
+            // details.addEventListener("transitionend", function(g){
+            //     details.classList.remove("translate-up-one");
+            //     details.classList.remove("translate-up-two");
+            // });
+
+        }
+
+        if (!overview.classList.contains("translate-up-one") && !overview.classList.contains("translate-down-two") && !overview.classList.contains("translate-neutral")){
+
+            overview.classList.add("translate-up-one");
+            details.classList.add("translate-up-one");
+
+            overview.addEventListener("transitionend", function(g){
+                overview.classList.add("translate-down-two");
+                overview.classList.remove("translate-up-one");
+            });
+
+        }
+
+    });
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+//original code
+        // for(let i=0;i<toggleVariety.length;i++){
+
+        //     toggleVariety[i].addEventListener("click",function(e){
+
+        //         e.preventDefault();
             
 
-                productOverview[i].classList.toggle("translate-up-one");
+        //         productOverview[i].classList.toggle("translate-up-one");
 
                 
-                productDetails[i].classList.toggle("translate-up-one"); 
+        //         productDetails[i].classList.toggle("translate-up-one"); 
 
             
                 
              
-            });
+        //     });
 
-        }
+        // }
 
       
 

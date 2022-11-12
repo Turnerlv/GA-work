@@ -292,7 +292,7 @@ body{
     flex-direction:column;
     align-items: center;
     gap: 1rem;
-    transition: 400ms ease-in-out;
+    /* transition: 400ms ease-in-out; */
     
 
     
@@ -308,7 +308,7 @@ body{
     position: absolute;
     left: 0;
     right: 0;
-    transition: 400ms ease-in-out;
+    /* transition: 400ms ease-in-out; */
 }
 
 .product-image {
@@ -366,6 +366,20 @@ body{
 
 .translate-up-one{  
     transform: translateY(-100%); 
+    transition: 400ms ease-in-out;
+}
+
+.translate-down-two{
+    transform: translateY(100%); 
+    transition: none;
+}
+
+.translate-neutral{
+    transform: translateY(0%); 
+    transition: 400ms ease-in-out;
+}
+.translate-up-two{
+    transform: translateY(-200%); 
 }
 
 
