@@ -1,27 +1,12 @@
-// function showValue(animal){
-
-// let thisProduct = productData[animal];
-
-// console.log(thisProduct[0].variants[0].option_values[1]);
-
-// }
-
-// document.addEventListener('DOMContentLoaded', function(event) {
-
-// showValue("Chicken");
-
-// });
-
-
-
-// Selection of HTML objects
 const menuButton = document.querySelector('#menu-button');
+const menuExpand = document.querySelector('.main-menu');
 const leftToggle = document.querySelector('.main-nav-left');
 const rightToggle = document.querySelector('.main-nav-right');
 
 // Toggle the navigation menu
 function toggleNav() {
 
+    menuExpand.classList.toggle('main-menu-stretch');
     leftToggle.classList.toggle('menu-toggle');
     rightToggle.classList.toggle('menu-toggle');
 
@@ -36,7 +21,7 @@ function toggleNav() {
     }
 }
 
-// Calling the function after click event occurs
+// trigger menu after click
 menuButton.addEventListener('click', function(e) {
     e.preventDefault();
     toggleNav();
@@ -134,24 +119,24 @@ let productOverview = document.querySelectorAll(".product-content-overview");
 let productDetails = document.querySelectorAll(".product-details");
 
 
-for(let i=0;i<toggleVariety.length;i++){
+for(let i=0;i<toggleVariety.length;i++){//cycle product cards
 
-    let overview = productOverview[i];
-    let details = productDetails[i];
+    let overview = productOverview[i];//overview section of selected product
+    let details = productDetails[i];//details section of selected product
     
-    toggleVariety[i].addEventListener("click",function(e){
+    toggleVariety[i].addEventListener("click",function(e){//add listener for each product toggle
 
         e.preventDefault();
         // console.log(overview);
         console.log(details);
 
-        if (overview.classList.contains("translate-down-two")){
-            overview.classList.add("translate-neutral");
-            // overview.classList.remove("translate-down-two");
-            details.classList.add("translate-up-two");
-            // details.classList.remove("translate-up-one");
+        if (overview.classList.contains("translate-down-two")){ // 2nd interaction:if the user has toggled once - overview hidden, details shown
 
-            overview.addEventListener("transitionend", function(g){
+            overview.classList.add("translate-neutral");//move overview into view
+            details.classList.add("translate-up-two");//move details out of view
+
+            overview.addEventListener("transitionend", function(g){//after the transition, remove all classes, return to default
+
                 overview.classList.remove("translate-down-two");
                 overview.classList.remove("translate-neutral");
 
@@ -162,19 +147,14 @@ for(let i=0;i<toggleVariety.length;i++){
                 
             });
 
-            // details.addEventListener("transitionend", function(g){
-            //     details.classList.remove("translate-up-one");
-            //     details.classList.remove("translate-up-two");
-            // });
-
         }
 
-        if (!overview.classList.contains("translate-up-one") && !overview.classList.contains("translate-down-two") && !overview.classList.contains("translate-neutral")){
+        if (!overview.classList.contains("translate-up-one") && !overview.classList.contains("translate-down-two") && !overview.classList.contains("translate-neutral")){//1st interaction: overview shown, details hidden
 
-            overview.classList.add("translate-up-one");
-            details.classList.add("translate-up-one");
+            overview.classList.add("translate-up-one");//move overview out of view
+            details.classList.add("translate-up-one");//move details into view
 
-            overview.addEventListener("transitionend", function(g){
+            overview.addEventListener("transitionend", function(g){//after the transition, move overview to bottom
                 overview.classList.add("translate-down-two");
                 overview.classList.remove("translate-up-one");
             });
@@ -188,32 +168,6 @@ for(let i=0;i<toggleVariety.length;i++){
 
 }
 
-
-
-
-
-
-
-
-//original code
-        // for(let i=0;i<toggleVariety.length;i++){
-
-        //     toggleVariety[i].addEventListener("click",function(e){
-
-        //         e.preventDefault();
-            
-
-        //         productOverview[i].classList.toggle("translate-up-one");
-
-                
-        //         productDetails[i].classList.toggle("translate-up-one"); 
-
-            
-                
-             
-        //     });
-
-        // }
 
       
 

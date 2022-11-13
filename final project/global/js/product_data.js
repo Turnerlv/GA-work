@@ -220,19 +220,22 @@ const productDataObject = {
                 "option_display_name": "Flavor",
                 "label": "Classic chicken",
                 "id": 1,
-                "option_id": 1
+                "option_id": 1,
+                "description": "Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.",
               },
               {
                 "option_display_name": "Flavor",
                 "label": "Spicy chicken",
                 "id": 1,
-                "option_id": 2
+                "option_id": 2,
+                "description": "Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.",
               },
               {
                 "option_display_name": "Flavor",
                 "label": "Lemon chicken",
                 "id": 1,
-                "option_id": 3
+                "option_id": 3,
+                "description": "Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.",
               }
             ],
             "calculated_price": 0,
@@ -410,19 +413,22 @@ const productDataObject = {
                 "option_display_name": "Flavor",
                 "label": "Original beef",
                 "id": 1,
-                "option_id": 1
+                "option_id": 1,
+                "description": "Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.",
               },
               {
                 "option_display_name": "Flavor",
                 "label": "Thai-chili beef",
                 "id": 1,
-                "option_id": 2
+                "option_id": 2,
+                "description": "Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.",
               },
               {
                 "option_display_name": "Flavor",
                 "label": "Turmeric beef",
                 "id": 1,
-                "option_id": 3
+                "option_id": 3,
+                "description": "Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.",
               }
             ],
             "calculated_price": 0,
@@ -601,19 +607,22 @@ const productDataObject = {
                 "option_display_name": "Flavor",
                 "label": "Classic French snapper",
                 "id": 1,
-                "option_id": 1
+                "option_id": 1,
+                "description": "Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.",
               },
               {
                 "option_display_name": "Flavor",
                 "label": "Habanero-lime snapper",
                 "id": 1,
-                "option_id": 2
+                "option_id": 2,
+                "description": "Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.",
               },
               {
                 "option_display_name": "Flavor",
                 "label": "Lemon-basil snapper",
                 "id": 1,
-                "option_id": 3
+                "option_id": 3,
+                "description": "Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.",
               }
             ],
             "calculated_price": 0,
