@@ -66,6 +66,11 @@ function addVarieties(){
 
     productVarieties[i].querySelector(".product-description").innerHTML = variety[i]['description'];
 
+    // Set button ID
+
+    productVarieties[i].querySelector(".button").setAttribute("id",variety[i]['id']);
+    console.log(productVarieties[i].querySelector(".button"));
+
     // Set product tagline  
 
     console.log(variety[i]['custom_fields'][0]['value']);
@@ -108,6 +113,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
   addVarieties();
 });
+
+// ***************** PASS BUTTON ID TO URL *********************
+
+let buttonId = document.querySelectorAll('.varieties-section .button');
+
+for (i=0;i<buttonId.length;i++){
+
+    buttonId[i].addEventListener('click', function(){
+
+        console.log(this.id);
+        this.attr('id', (_, v) => `${v}?my-string`);
+
+    });
+}
+
 
 
 

@@ -74,7 +74,7 @@ function addProductData(){
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    addProductData();
+    addProducts();
   });
 
 

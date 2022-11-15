@@ -167,12 +167,6 @@ const productDataObject = {
         "thumb":"../global/images/Open container_chicken@2x.png",
         "alt":"Chicken bone broth open"
         },
-        // ************ Perspective container image *************//
-        {
-          "image":"../global/images/perspective_chicken.png", 
-          "thumb":"../global/images/perspective_chicken.png",
-          "alt":"Chicken bone broth alternate"
-        },
         // ************ Spicy variant image *************//
         {
           "image":"../global/images/Flat_Chicken - spicy chicken.png", 
@@ -359,12 +353,6 @@ const productDataObject = {
         "image":"../global/images/Open container_beef@2x.png", 
         "thumb":"../global/images/Open container_beef@2x.png",
         "alt":"Beef bone broth open"
-        },
-        // ************ Perspective container image *************//
-        {
-          "image":"../global/images/perspective_beef.png", 
-          "thumb":"../global/images/perspective_beef.png",
-          "alt":"Beef bone broth alternate"
         },
         // ************ Spicy variant image *************//
         {
@@ -553,12 +541,6 @@ const productDataObject = {
         "image":"../global/images/Open container_fish@2x.png", 
         "thumb":"../global/images/Open container_fish@2x.png",
         "alt":"Fish bone broth open"
-        },
-        // ************ Perspective container image *************//
-        {
-          "image":"../global/images/perspective_fish.png", 
-          "thumb":"../global/images/perspective_fish.png",
-          "alt":"Fish bone broth alternate"
         },
         // ************ Spicy variant image *************//
         {
