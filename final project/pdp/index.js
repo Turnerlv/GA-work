@@ -34,7 +34,7 @@ menuButton.addEventListener('click', function(e) {
 
 
 function addProductData(){
-    let productData = productDataObject['data'][0];
+    let productData = productDataObject['data'][parseInt(localStorage.getItem("item")) - 1];
     console.log(productData.images[0].image);
 
     document.querySelector(".product-name").innerText = productData.name;
@@ -73,7 +73,7 @@ function addProductData(){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-
+    console.log(localStorage.getItem("item"));
     addProductData();
   });
 

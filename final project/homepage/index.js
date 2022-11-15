@@ -118,12 +118,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let buttonId = document.querySelectorAll('.varieties-section .button');
 
+
+
 for (i=0;i<buttonId.length;i++){
 
-    buttonId[i].addEventListener('click', function(){
+    buttonId[i].addEventListener('click', function(e){
 
-        console.log(this.id);
-        this.attr('id', (_, v) => `${v}?my-string`);
+        e.preventDefault();
+        localStorage.setItem("item", this.id);
+        console.log(localStorage.getItem("item"));
+        window.open(e.target.href,"_self");
 
     });
 }
