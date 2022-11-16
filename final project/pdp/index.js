@@ -53,7 +53,7 @@ function addProductData(){
 
         thumbHTML +=
             "<a href=\""+productData.images[i].image+"\"><img class=\"image-thumbnail\" src=\""+productData.images[i].thumb+"\" alt=\""+productData.images[i].alt+"\"/></a>";
-            console.log("something is happening!");
+            
 
     }
 
@@ -74,78 +74,134 @@ function addProductData(){
     //add variant options
     let variantsHTML = document.querySelector(".product-variants-content");
     let variants = productData.variants[0].option_values;
-    console.log(variants);
 
     for (i=0;i<variants.length;i++){
 
-        variantsHTML.innerHTML += "<div class=\"product-variant\">" + "<div class=\"variant-name\">" + 
+        variantsHTML.innerHTML += "<div class=\"product-variant\" id=\"" + i + "\">" + "<div class=\"variant-name\">" + 
         "<h4>" + variants[i].label + "</h4>" +
         "<p>" + variants[i].description +  "</p></div>" +
-        "<div class=\"variant-counter\"><a href=\"#\"class=\"variant-counter-icon\"><span class=\"material-symbols-outlined\">remove</span></a> </div><div class=\"variant-counter\"><p>0</p></div><div class=\"variant-counter\"><a href=\"#\" class=\"variant-counter-icon\"><span class=\"material-symbols-outlined\">add</span></a></div></div>";
-        console.log(variantsHTML);
+        "<div class=\"variant-counter\"><a href=\"#\"class=\"variant-counter-icon remove-product\"><span class=\"material-symbols-outlined\">remove</span></a> </div><div class=\"variant-counter\"><p>0</p></div><div class=\"variant-counter\"><a href=\"#\" class=\"variant-counter-icon add-product\"><span class=\"material-symbols-outlined\">add</span></a></div></div>";
+        
     }
 
     // Price calculator
 
-    const variantEvent = document.querySelectorAll(".product-variant");
-    
-    let totalPrice = 0;
+//     let variantEvent = document.querySelectorAll(".product-variant");
+//     let totalPrice = 0;
+//     let countQuant = [];
 
-    for (g=0;g<variantEvent.length;g++){
+//     for (g=0;g<variantEvent.length;g++){
 
-        let addProduct = variantEvent[g].querySelectorAll(".variant-counter-icon");
-
-        console.log(addProduct);
-
-        for (z=0;z<addProduct.length;z++){
-
-            addProduct[z].addEventListener('click', function(q){
-
-                        q.preventDefault();
-                        // console.log(this);
-                        // console.log(this.querySelector(".material-symbols-outlined").innerHTML);
-                        // variantEvent[g].innerHTML = "<div class=\"variant-counter\"><a href=\"#\"class=\"variant-counter-icon\"><span class=\"material-symbols-outlined\">remove</span></a> </div><div class=\"variant-counter\"><p>4</p></div>"+ variantEvent[g];
+        
+//         let addProduct = variantEvent[g].querySelector(".add-product");
+//         let removeProduct = variantEvent[g].querySelector(".remove-product");
+//         let variantCounter = variantEvent[g].querySelector(".variant-counter p");
 
 
-                        
-                        
-                        if (this.querySelector(".material-symbols-outlined").innerHTML == "add"){
-            
-                            totalPrice = totalPrice + productData.price;
-                            document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
-                            document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
-                            if (totalPrice <= 0){
-                                totalPrice = 0;
-                                document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
-                                document.querySelector("#one-time-price h3").innerHTML = "$0.00";
-                            }
+//             addProduct.addEventListener('click', function(e){
 
-                        } if (this.querySelector(".material-symbols-outlined").innerHTML == "remove"){
+//                             e.preventDefault();
 
-                            totalPrice = totalPrice - productData.price;
-                            document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
-                            document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
-                            if (totalPrice <= 0){
-                                totalPrice = 0;
-                                document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
-                                document.querySelector("#one-time-price h3").innerHTML = "$0.00";
-                            }
+//                             totalPrice = totalPrice + productData.price;
+//                             document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
+//                             document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
+//                             variantCounter.innerText = "added";
 
-                        }
-            
-                });
+//                             if ()
 
+//                             if (totalPrice <= 0){
+//                                 totalPrice = 0;
+//                                 document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
+//                                 document.querySelector("#one-time-price h3").innerHTML = "$0.00";
+//                             }
+//                 });    
 
+//             removeProduct.addEventListener('click', function(e){
 
-        }
-   
+//                             e.preventDefault();
+
+//                             totalPrice = totalPrice - productData.price;
+//                             document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
+//                             document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
+//                             if (totalPrice <= 0){
+//                                 totalPrice = 0;
+//                                 document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
+//                                 document.querySelector("#one-time-price h3").innerHTML = "$0.00";
+//                             }
+//                      });
+
        
+//     }
+
+// }
+
+
+let variantEvent = document.querySelectorAll(".product-variant");
+let totalPrice = 0;
+
+
+for (g=0;g<variantEvent.length;g++){
+
+    
+    let addProduct = variantEvent[g].querySelector(".add-product");
+    let removeProduct = variantEvent[g].querySelector(".remove-product");
+    let variantCounter = variantEvent[g].querySelector(".variant-counter p");
+    console.log(variantEvent[g]);
+
+    if (variantEvent[g].id == g){
+        console.log(g);
+        let countQuant = 0;
+        addProduct.addEventListener('click', function(e){
+
+                                        e.preventDefault();
+                                        countQuant++;
+                                        totalPrice = totalPrice + productData.price;
+                                        document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
+                                        document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
+                                        variantCounter.innerText = countQuant;
+   
+                                        if (totalPrice <= 0){
+                                            totalPrice = 0;
+                                            document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
+                                            document.querySelector("#one-time-price h3").innerHTML = "$0.00";
+                                        }
+         });    
+            
+        removeProduct.addEventListener('click', function(e){
+            
+                                        if (countQuant > 0){
+                                        e.preventDefault();
+                                        countQuant--;
+                                        totalPrice = totalPrice - productData.price;
+                                        document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
+                                        document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
+                                        variantCounter.innerText = countQuant;
+
+                                        if (totalPrice <= 0){
+                                            totalPrice = 0;
+                                            document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
+                                            document.querySelector("#one-time-price h3").innerHTML = "$0.00";
+                                        }
+                                    }
+         });
+
     }
+
+    
+
+
+   
+}
 
 }
 
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    console.log(localStorage.getItem("item"));
+    // console.log(localStorage.getItem("item"));
     addProductData();
   });
 
