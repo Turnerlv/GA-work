@@ -259,6 +259,7 @@ p{
     flex-direction: column;
     border: solid 1px #b2b2b2;
     border-radius: 0.25rem;
+    margin-bottom: 2rem;
 }
 .product-variant{
     display: flex;
@@ -285,6 +286,67 @@ p{
     text-align: center;
 }
 
+/* BOOTSTRAP OVERRIDES */
+
+.accordion-item{
+    border: solid 1px #b2b2b2;
+}
+.accordion-button{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 1rem;
+    font-family: helvetica;
+    font-weight: 600;
+    background-color: #f2f2f2;
+    margin-bottom: 0;
+    padding: 0 0 1rem 0;
+}
+.accordion-button::after {
+    display: none;
+}
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+    color:#333333;
+    background-color: #ffffff;
+}
+.price-select{
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.form-check-label{
+    flex:1;
+    cursor: pointer;
+}
+.form-check .form-check-input{
+    margin: 0;
+}
+.accordion-body{
+    padding: 0 1.5rem 1.5rem 3.25rem;
+}
+.price-content{
+    display: flex;
+    align-items:baseline;
+    gap: 0.5rem;
+    margin-left: 3.25rem;
+}
+.price{
+    font-family: helvetica;
+}
+.discount{
+    font-weight: 400;
+    color: #014108;
+}
+.form-select{
+    font-family: helvetica;
+    margin-bottom: 1rem;
+}
+select{
+    font-family: helvetica;
+}
 
 /********  BOTTOM NAVIGATION SECTION  *********/
 

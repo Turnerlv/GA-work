@@ -8,10 +8,14 @@
 		<title>Scrap & Bone product details</title>
 		
 		<!-- external CSS link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  <!-- Bootstrap  -->
 		<link rel="stylesheet" href="../global/css/reset.css">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!-- Google material icons -->
 		<link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="../global/images/Favicon.png"/> 
+        <link rel="icon" type="image/png" href="../global/images/Favicon.png"/><!-- Favicon -->
+        
+        
+       
 		
 	</head>
 	<body>
@@ -20,7 +24,7 @@
             <nav class="main-menu-bar">
                 <div class="logo-container">
                     <a href="#" class="main-nav-item inline-nav-item" id="menu-button"><span class="material-symbols-outlined">menu</span>Menu</a>
-                    <a href="#" class="logo-link">
+                    <a href="../homepage/index.html" class="logo-link">
                     <img src="../global/images/Logo_original_Logo_Logo.svg" alt="Scrap & Bone" class="logo">
                     </a>
                     <a href="#" class="main-nav-item inline-nav-item"><span class="material-symbols-outlined">shopping_cart</span>Cart</a>
@@ -71,61 +75,64 @@
                 <div class="product-details-right">
                     <h4>Flavors</h4>
                     <div class="product-variants-content">
-                        <div class="product-variant">
-                            <div class="variant-name">
-                                <h4>Spicy thai basil</h4>
-                                <p>Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.  </p>
-                            </div>
-                            <div class="variant-counter">
-                                <a href="#" class="variant-counter-icon"><span class="material-symbols-outlined">remove</span></a>
-                            </div>
-                            <div class="variant-counter">
-                                <p>4</p>
-                            </div>
-                            <div class="variant-counter">
-                                <a href="#" class="variant-counter-icon"><span class="material-symbols-outlined">add</span></a>
-                            </div>
-                            
-
-
-                        </div>
-                        <div class="product-variant">
-                            <div class="variant-name">
-                                <h4>Spicy thai basil</h4>
-                                <p>Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.  </p>
-                            </div>
-                            <div class="variant-counter">
-                                <a href="#" class="variant-counter-icon"><span class="material-symbols-outlined">remove</span></a>
-                            </div>
-                            <div class="variant-counter">
-                                <p>4</p>
-                            </div>
-                            <div class="variant-counter">
-                                <a href="#" class="variant-counter-icon"><span class="material-symbols-outlined">add</span></a>
-                            </div>
-                            
-
-
-                        </div>
-                        <div class="product-variant">
-                            <div class="variant-name">
-                                <h4>Spicy thai basil</h4>
-                                <p>Lörem ipsum kaligen ugt Kalle Anka-logistik liksom exonde sur.  </p>
-                            </div>
-                            <div class="variant-counter">
-                                <a href="#" class="variant-counter-icon"><span class="material-symbols-outlined">remove</span></a>
-                            </div>
-                            <div class="variant-counter">
-                                <p>4</p>
-                            </div>
-                            <div class="variant-counter">
-                                <a href="#" class="variant-counter-icon"><span class="material-symbols-outlined">add</span></a>
-                            </div>
-                            
-
-
-                        </div>
+                        
+                        
                     </div>
+
+                    <!--Checkout using accordion-->
+
+
+
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button form-check" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="price-select">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                    <label class="form-check-label pricing-option" for="flexRadioDefault1">
+                                    Subscribe:
+                                    </label>
+                                </div>
+                                <div class="price-content" id="subscribe-price">
+                                    <h3 class="price">$0.00</h3>
+                                    <p class="discount"> 10% savings</p>
+                                </div>
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="price-label">Deliver every:</p>
+                                <select class="form-select" aria-label="placeholder">
+                                    <option selected>2 weeks</option>
+                                    <option value="1">1 Month</option>
+                                    <option value="2">2 Months</option>
+                                    <option value="3">3 Months</option>
+                                  </select>
+                                  <a href="#"></a><div class="button">Subscribe</div></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed form-check" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="price-select">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                    One-time:
+                                    </label>
+                                </div>
+                                <div class="price-content" id="one-time-price">
+                                    <h3 class="price">$0.00</h3>
+                                </div>
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <a href="#"></a><div class="button">Add to cart</div></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
                 </div>
             </div>
@@ -182,9 +189,11 @@
             <p><span>&copy;</span>Scrap & Bone 2022</p>
 				
 		</footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> <!--Bootstrap-->
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="index.js"></script>
         <script src="../global/js/product_data.js"></script>
+        
          
 	</body>
 </html>
