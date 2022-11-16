@@ -84,56 +84,7 @@ function addProductData(){
         
     }
 
-    // Price calculator
-
-//     let variantEvent = document.querySelectorAll(".product-variant");
-//     let totalPrice = 0;
-//     let countQuant = [];
-
-//     for (g=0;g<variantEvent.length;g++){
-
-        
-//         let addProduct = variantEvent[g].querySelector(".add-product");
-//         let removeProduct = variantEvent[g].querySelector(".remove-product");
-//         let variantCounter = variantEvent[g].querySelector(".variant-counter p");
-
-
-//             addProduct.addEventListener('click', function(e){
-
-//                             e.preventDefault();
-
-//                             totalPrice = totalPrice + productData.price;
-//                             document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
-//                             document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
-//                             variantCounter.innerText = "added";
-
-//                             if ()
-
-//                             if (totalPrice <= 0){
-//                                 totalPrice = 0;
-//                                 document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
-//                                 document.querySelector("#one-time-price h3").innerHTML = "$0.00";
-//                             }
-//                 });    
-
-//             removeProduct.addEventListener('click', function(e){
-
-//                             e.preventDefault();
-
-//                             totalPrice = totalPrice - productData.price;
-//                             document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
-//                             document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
-//                             if (totalPrice <= 0){
-//                                 totalPrice = 0;
-//                                 document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
-//                                 document.querySelector("#one-time-price h3").innerHTML = "$0.00";
-//                             }
-//                      });
-
-       
-//     }
-
-// }
+    //********************* Price calculator ****************
 
 
 let variantEvent = document.querySelectorAll(".product-variant");
@@ -153,36 +104,36 @@ for (g=0;g<variantEvent.length;g++){
         let countQuant = 0;
         addProduct.addEventListener('click', function(e){
 
-                                        e.preventDefault();
-                                        countQuant++;
-                                        totalPrice = totalPrice + productData.price;
-                                        document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
-                                        document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
-                                        variantCounter.innerText = countQuant;
+             e.preventDefault();
+             countQuant++;
+             totalPrice = totalPrice + productData.price;
+             document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
+             document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
+             variantCounter.innerText = countQuant;
    
-                                        if (totalPrice <= 0){
-                                            totalPrice = 0;
-                                            document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
-                                            document.querySelector("#one-time-price h3").innerHTML = "$0.00";
-                                        }
+                    if (totalPrice <= 0){
+                        totalPrice = 0;
+                        document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
+                        document.querySelector("#one-time-price h3").innerHTML = "$0.00";
+                    }
          });    
             
         removeProduct.addEventListener('click', function(e){
             
-                                        if (countQuant > 0){
-                                        e.preventDefault();
-                                        countQuant--;
-                                        totalPrice = totalPrice - productData.price;
-                                        document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
-                                        document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
-                                        variantCounter.innerText = countQuant;
+            if (countQuant > 0){
+            e.preventDefault();
+            countQuant--;
+            totalPrice = totalPrice - productData.price;
+            document.querySelector("#subscribe-price h3").innerHTML = "$" + (totalPrice*0.9).toFixed(2);
+            document.querySelector("#one-time-price h3").innerHTML = "$" + totalPrice.toFixed(2);
+            variantCounter.innerText = countQuant;
 
-                                        if (totalPrice <= 0){
-                                            totalPrice = 0;
-                                            document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
-                                            document.querySelector("#one-time-price h3").innerHTML = "$0.00";
-                                        }
-                                    }
+                    if (totalPrice <= 0){
+                        totalPrice = 0;
+                        document.querySelector("#subscribe-price h3").innerHTML = "$0.00";
+                        document.querySelector("#one-time-price h3").innerHTML = "$0.00";
+                    }
+                }
          });
 
     }

@@ -250,6 +250,18 @@ p{
 
 }
 
+@media (max-width:1120px){
+    .product-details-content{
+        flex-direction: column;
+    }
+}
+@media (max-width:768px){
+    h1{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
 /* Right side */
 .product-details-right > h4{
     margin: 0 0 1rem 1.5rem;
@@ -284,6 +296,26 @@ p{
 .variant-counter p{
     width: 1.5rem;
     text-align: center;
+}
+.variant-counter span{
+    color: #333333;
+}
+@media (max-width:768px){
+    .product-variant{
+        flex-wrap: wrap;
+    }
+    .variant-name{
+        flex: 100%;
+    }
+    .variant-counter{
+        flex:1;
+        justify-content: center;
+        border-left: none;
+        border-top: solid 1px #b2b2b2;
+        padding: 1rem 1.5rem;
+        
+    }
+    
 }
 
 /* BOOTSTRAP OVERRIDES */
@@ -415,6 +447,21 @@ fieldset p{
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     margin-left: 0.5rem;
+}
+.button-small:hover{
+    background-color: #002b05;
+}
+@media (max-width:992px){
+    .bottom-navigation-section{
+        flex-wrap: wrap;
+    }
+    .bottom-navigation-content{
+        flex: 1;
+    }
+    .bottom-navigation-content:last-child{
+        flex:100%;
+    }
+
 }
 
 /********  Footer  *********/
